@@ -1,0 +1,14 @@
+name: Bridge Index Branch
+
+on:
+  push:
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: poolsideai/bridge-sdk/action@main
+        with:
+          repository_id: ${{ secrets.BRIDGE_REPOSITORY_ID }}
+          token: ${{ secrets.BRIDGE_API_TOKEN }}
+          api_base_url: ${{ secrets.BRIDGE_API_URL }}
