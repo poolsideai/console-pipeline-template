@@ -151,9 +151,9 @@ In your repo:
 
    | Secret name | Value |
    |-------------|-------|
-   | `POOLSIDE_REPOSITORY_ID` | The **ID** shown at the top of the **Edit Repository** page (from step D) |
-   | `POOLSIDE_API_TOKEN`     | The API key from G1 (the `ps-…` string) |
-   | `POOLSIDE_API_URL`       | `https://api.XYZ.poolsi.de` (your Poolside contact will confirm the exact value, typically `https://api.poolsi.de`) |
+   | `BRIDGE_REPOSITORY_ID` | The **ID** shown at the top of the **Edit Repository** page (from step D) |
+   | `BRIDGE_API_TOKEN`     | The API key from G1 (the `ps-…` string) |
+   | `BRIDGE_API_URL`       | `https://api.XYZ.poolsi.de` (your Poolside contact will confirm the exact value, typically `https://api.poolsi.de`) |
 
 The next push to any branch will trigger `.github/workflows/bridge-index.yml`. Open the **Actions** tab in GitHub to watch the run. The action calls the indexing endpoint and polls until it reports `finished`, then writes the resulting `commit_id` as a workflow output.
 
