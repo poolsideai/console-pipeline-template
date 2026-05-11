@@ -3,9 +3,10 @@
 The deterministic step builds a research brief from a topic. The agent step
 takes that brief, runs research via a Poolside agent, and returns findings.
 
-This is the canonical Bridge pattern: programmatic steps prepare structured
-context, agent steps reason over it, and the next programmatic step (not
-included here, but you should add one for production) validates the output.
+This is the canonical orchestration pattern: programmatic steps prepare
+structured context, agent steps reason over it, and the next programmatic
+step (not included here, but you should add one for production) validates
+the output.
 """
 
 import json
@@ -105,7 +106,7 @@ def investigate(
     with BridgeExecutionClient() as client:
         _, session_id, _ = client.start_agent(
             prompt=prompt,
-            agent_name=os.environ.get("BRIDGE_AGENT_NAME", "starter-agent"),
+            agent_name=os.environ.get("POOLSIDE_AGENT_NAME", "starter-agent"),
         )
 
     try:
