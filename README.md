@@ -113,6 +113,8 @@ Still on the **Edit Repository** page:
 
 Poolside Console now knows about your pipeline and its steps.
 
+> **Reminder — agent name and re-indexing.** Make sure you replaced the placeholder `starter-agent` in `first_pipeline/steps.py` with a real agent name from the **Agents** page (see "Important: set the agent name before running in Poolside Console" earlier). If you change `steps.py` (the agent name or anything else) **after** indexing, the change is not picked up automatically until you re-index. With the GitHub Action from step G set up, every push triggers a re-index. Without it, you have to return to the **Edit Repository** page and click **+ Index** again each time.
+
 ### F. Run the pipeline from Console
 
 1. Go to **Orchestration** > **Pipelines**
