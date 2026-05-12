@@ -84,7 +84,7 @@ Poolside Console needs read access to your repo. Create a classic PAT in GitHub:
 ### C. Store the PAT as a credential in Poolside Console
 
 1. Open Poolside Console: https://XYZ.poolsi.de/console
-2. Go to **Security** > **Credentials** > **New Credential**
+2. Go to **Orchestration** > **Orchestration Credentials** > **New Credential**
 3. Fill in:
    - **Name**: an uppercase identifier, e.g. `XYZ_GITHUB_PAT` (this convention matches existing credentials in the tenant)
    - **Data**: paste the PAT value you copied above
@@ -92,7 +92,7 @@ Poolside Console needs read access to your repo. Create a classic PAT in GitHub:
 
 ### D. Register the repository
 
-1. Go to **Orchestration** > **Repositories** > **New Repository**
+1. Go to **Orchestration** > **Orchestration Repositories** > **New Repository**
 2. Fill in the form:
    - **Name**: short label (shown across the UI)
    - **Provider**: `GitHub`
