@@ -178,4 +178,13 @@ The next push to any branch will trigger `.github/workflows/bridge-index.yml`. O
 - Add credentials via `credential_bindings` on the agent step if it needs API tokens.
 - Bind an eval with `@bridge_eval` to score the agent's findings on each run.
 
-See the SDK reference: https://github.com/poolsideai/bridge-sdk
+## More patterns
+
+Looking for more patterns? Browse `bridge-sdk/examples` for recipes you can copy into this project:
+
+- [`example.py`](https://github.com/poolsideai/bridge-sdk/blob/main/examples/example.py) — multi-step DAG with several dependent steps and sandbox definitions
+- [`agent_example.py`](https://github.com/poolsideai/bridge-sdk/blob/main/examples/agent_example.py) — agent step variants
+- [`multimodal_agent_example.py`](https://github.com/poolsideai/bridge-sdk/blob/main/examples/multimodal_agent_example.py) — passing image inputs to an agent via `content_parts`
+- [`webhook_example.py`](https://github.com/poolsideai/bridge-sdk/blob/main/examples/webhook_example.py) and [`webhook_generic_example.py`](https://github.com/poolsideai/bridge-sdk/blob/main/examples/webhook_generic_example.py) — triggering a pipeline from external webhooks via `WebhookPipelineAction` and CEL
+
+See the full SDK reference: https://github.com/poolsideai/bridge-sdk
