@@ -93,10 +93,15 @@ Do not include anything else in the file. Do not skip the write tool call.
 
 @pipeline.step(metadata={"type": "agent"})
 def investigate(
-    input_data: TopicInput,
     brief: Annotated[ResearchBrief, step_result(build_research_brief)],
 ) -> AgentFindings:
-    """Run an agent against the brief and parse the structured result."""
+    """Run an agent against the brief and parse the structured result.
+
+    No `input_data` parameter: pipeline input flows in via step 1, then this
+    step reads everything it needs from `brief` (the upstream step's output).
+    Adding an unused `input_data` would make the framework require a second
+    input dict at trigger time, even though we have nothing to do with it.
+    """
     prompt = PROMPT_TEMPLATE.format(
         topic=brief.topic,
         questions="\n".join(f"- {q}" for q in brief.questions),
